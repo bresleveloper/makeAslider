@@ -4,34 +4,34 @@
         .wrapper{height: 500px; padding: 100px 0; background: blueviolet;}
     
         ul{position: relative;}
-        li{position: absolute; top: 0; left:-100%; width: 100%;}
+        li{position: absolute; opacity: 0; top: 0; left:0; width: 100%;}
         img{width: 100%; max-height: 250px;}
         li>div{position: absolute;right: 10%;top: 6%;}
     
-        li.show{left:0}
+        li.show{opacity:1}
     
     </style>
     
-    <div class="wrapper">
+<div class="wrapper">
     <ul>
         <li class="show">
             <div>hello dear cow</div>
-            <img src="../img/1.png">
+            <img src="https://raw.githubusercontent.com/bresleveloper/makeAslider/master/img/1.png">
         </li>
         <li>
             <div>na nah navhma nachman me uman</div>
-            <img src="../img/2.png">
+            <img src="https://raw.githubusercontent.com/bresleveloper/makeAslider/master/img/2.png">
         </li>
         <li>
             <div>bla bla bla gets u ha ha ha </div>
-            <img src="../img/3.png">
+            <img src="https://raw.githubusercontent.com/bresleveloper/makeAslider/master/img/3.png">
         </li>
         <li>
             <div>nana car & nana movie</div>
-            <img src="../img/4.png">
+            <img src="https://raw.githubusercontent.com/bresleveloper/makeAslider/master/img/4.png">
         </li>
     </ul>
-    </div>
+</div>
     
     <script>
     
@@ -40,10 +40,10 @@
     function showItem(){
         let hideli = document.querySelectorAll('li')[liIndex]
         //hideli.className = ''
-        for (let i = 0; i <= 100; i++) {
-            let time = 0 + (i*10)
+        for (let i = 100; i >= 0; i--) {
+            let time = 2500 - (i*25)
             setTimeout(() => {
-                hideli.style.left = '-'+i+'%'
+                hideli.style.opacity = 0.01*i
             }, time)
         }
     
@@ -53,15 +53,15 @@
     
         let showli = document.querySelectorAll('li')[++liIndex]
         //showli.className = 'show'
-        for (let i = 100; i >= 0; i--) {
-            let time = 1000 - (i*10)
+        for (let i = 0; i <= 100; i++) {
+            let time = 0 + (i*25) //let time = i*15
             setTimeout(() => {
-                showli.style.left = i+'%'
+                showli.style.opacity = 0.01*i
             }, time)
         }
     }
     
     showItem()
-    setInterval(showItem, 2000)
+    setInterval(showItem, 3000)
     
     </script>

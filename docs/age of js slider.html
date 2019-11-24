@@ -1,0 +1,67 @@
+
+<style>
+        ul, body{margin: 0;padding: 0;border: 0;}
+        .wrapper{height: 500px; padding: 100px 0; background: blueviolet;}
+    
+        ul{position: relative;}
+        li{position: absolute; top: 0; left:-100%; width: 100%;}
+        img{width: 100%; max-height: 250px;}
+        li>div{position: absolute;right: 10%;top: 6%;}
+    
+        li.show{left:0}
+    
+    </style>
+    
+<div class="wrapper">
+    <ul>
+        <li class="show">
+            <div>hello dear cow</div>
+            <img src="https://raw.githubusercontent.com/bresleveloper/makeAslider/master/img/1.png">
+        </li>
+        <li>
+            <div>na nah navhma nachman me uman</div>
+            <img src="https://raw.githubusercontent.com/bresleveloper/makeAslider/master/img/2.png">
+        </li>
+        <li>
+            <div>bla bla bla gets u ha ha ha </div>
+            <img src="https://raw.githubusercontent.com/bresleveloper/makeAslider/master/img/3.png">
+        </li>
+        <li>
+            <div>nana car & nana movie</div>
+            <img src="https://raw.githubusercontent.com/bresleveloper/makeAslider/master/img/4.png">
+        </li>
+    </ul>
+</div>
+    
+    <script>
+    
+    let liIndex = 0
+    let limax = 3
+    function showItem(){
+        let hideli = document.querySelectorAll('li')[liIndex]
+        //hideli.className = ''
+        for (let i = 0; i <= 100; i+=0.2) {
+            let time = 0 + (i*12) //let time = i*15 
+            setTimeout(() => {
+                hideli.style.left = '-'+i+'%'
+            }, time)
+        }
+    
+        if (liIndex >= limax) {
+            liIndex = -1
+        }
+    
+        let showli = document.querySelectorAll('li')[++liIndex]
+        //showli.className = 'show'
+        for (let i = 100; i >= 0; i-=.2) {
+            let time = 1200 - (i*12)
+            setTimeout(() => {
+                showli.style.left = i+'%'
+            }, time)
+        }
+    }
+    
+    //showItem()
+    setInterval(showItem, 2000)
+    
+    </script>
