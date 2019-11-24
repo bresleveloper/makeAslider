@@ -25,4 +25,9 @@ and `img/1.png` to your folder/imagename
 ## pages
 
 * [play.html](https://bresleveloper.github.io/makeAslider/play.html) just relpace class for show
-* [age of js slider.html](https://bresleveloper.github.io/makeAslider/age of js slider.html) make a slider with js
+* [age of js slider.html](https://bresleveloper.github.io/makeAslider/age%20of%20js%20slider.html) make a slider with js
+* [age of js opacity.html](https://bresleveloper.github.io/makeAslider/age%20of%20js%20opacity.html) make an opacity gallery with js
+* [transition.html](https://bresleveloper.github.io/makeAslider/transition.html) transision example
+* [transition triple slider.html](https://bresleveloper.github.io/makeAslider/transition%20triple%20slider.html) make a slider with transision
+* [transition triple opacity.html](https://bresleveloper.github.io/makeAslider/transition%20triple%20opacity.html) make an opacity gallery with transision
+
