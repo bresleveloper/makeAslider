@@ -4,11 +4,19 @@
     .wrapper{height: 500px; padding: 100px 0; background: blueviolet;}
 
     ul{position: relative;}
-    li{position: absolute; top: 0; left:-100%; width: 100%;}
+    li{
+        position: absolute; 
+        overflow: hidden;
+        top: 0; 
+        height: 0; 
+        left:-100%; 
+        width: 100%;
+        transition: height 2s, left 2s;
+    }
     img{width: 100%; max-height: 250px;}
     li>div{position: absolute;right: 10%;top: 6%;}
 
-    li.show{left:0}
+    li.show{left:0; height: 250px;}
 
 </style>
 
@@ -16,19 +24,19 @@
 <ul>
     <li class="show">
         <div>hello dear cow</div>
-        <img src="https://github.com/bresleveloper/makeAslider/img/1.png">
+        <img src="../img/1.png">
     </li>
     <li>
         <div>na nah navhma nachman me uman</div>
-        <img src="https://github.com/bresleveloper/makeAslider/img/2.png">
+        <img src="../img/2.png">
     </li>
     <li>
         <div>bla bla bla gets u ha ha ha </div>
-        <img src="https://github.com/bresleveloper/makeAslider/img/3.png">
+        <img src="../img/3.png">
     </li>
     <li>
         <div>nana car & nana movie</div>
-        <img src="https://github.com/bresleveloper/makeAslider/img/4.png">
+        <img src="../img/4.png">
     </li>
 </ul>
 </div>
@@ -49,6 +57,6 @@ function showItem(){
     showli.className = 'show'
 }
 
-setInterval(showItem, 1000)
+setInterval(showItem, 2600)
 
 </script>
