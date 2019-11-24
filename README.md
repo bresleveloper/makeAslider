@@ -20,3 +20,9 @@ resulst should be like
 change `bresleveloper/makeAslider` to your username/reponame
 
 and `img/1.png` to your folder/imagename 
+
+
+## pages
+
+* [play.html](https://bresleveloper.github.io/makeAslider/play.html) just relpace class for show
+* [age of js slider.html](https://bresleveloper.github.io/makeAslider/age of js slider.html) make a slider with js
